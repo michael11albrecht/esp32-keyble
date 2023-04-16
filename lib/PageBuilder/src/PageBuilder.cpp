@@ -22,7 +22,7 @@
 #define PB_APPLIED_FILECLASS  FS
 #elif defined(ARDUINO_ARCH_ESP32)
 #include <LITTLEFS.h>
-#define PB_APPLIED_FILECLASS  fs::LITTLEFSFS
+#define PB_APPLIED_FILECLASS  fs::LittleFSFS
 #endif
 #endif
 
