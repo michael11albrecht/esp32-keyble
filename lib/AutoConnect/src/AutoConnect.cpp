@@ -1462,7 +1462,7 @@ void AutoConnect::_setReconnect(const AC_STARECONNECT_t order) {
     _disconnectEventId = WiFi.onEvent([](WiFiEvent_t e, WiFiEventInfo_t info) {
       AC_DBG("STA lost connection:%d\n", info.disconnected.reason);
       AC_DBG("STA connection %s\n", WiFi.reconnect() ? "restored" : "failed");
-    }, WiFiEvent_t::SYSTEM_EVENT_AP_STADISCONNECTED);
+    }, WiFiEvent_t::ARDUINO_EVENT_WIFI_STA_DISCONNECTED);
     AC_DBG("Event<%d> handler registered\n", static_cast<int>(WiFiEvent_t::SYSTEM_EVENT_AP_STADISCONNECTED));
   }
   else if (order == AC_RECONNECT_RESET) {
